@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import Layout from "../Layout";
+import Input from "../UI/input";
 
 export default function Signup() {
   return (
@@ -12,31 +13,40 @@ export default function Signup() {
               <Form>
                 <Row>
                   <Col md={6}>
-                    <Form.Group controlId="formBasicPassword">
-                      <Form.Label>First Name</Form.Label>
-                      <Form.Control type="password" placeholder="Password" />
-                    </Form.Group>
+                    <Input
+                      label="First Name"
+                      placeholder="Fist Name"
+                      value=""
+                      type="text"
+                      onChange={() => {}}
+                    ></Input>
                   </Col>
                   <Col md={6}>
-                    <Form.Group controlId="formBasicPassword">
-                      <Form.Label>Last Name</Form.Label>
-                      <Form.Control type="password" placeholder="Password" />
-                    </Form.Group>
+                    <Input
+                      label="Last Name"
+                      placeholder="Last Name"
+                      value=""
+                      type="text"
+                      onChange={() => {}}
+                    ></Input>
                   </Col>
                 </Row>
-                <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Email address</Form.Label>
 
-                  <Form.Control type="email" placeholder="Enter email" />
-                  <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                  </Form.Text>
-                </Form.Group>
+                <Input
+                  label="Email"
+                  placeholder="Email"
+                  value=""
+                  type="text"
+                  onChange={() => {}}
+                ></Input>
 
-                <Form.Group controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
+                <Input
+                  label="Password"
+                  placeholder="Password"
+                  value=""
+                  type="password"
+                  onChange={() => {}}
+                ></Input>
 
                 <Button variant="primary" type="submit">
                   Submit
