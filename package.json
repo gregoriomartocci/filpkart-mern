@@ -14,7 +14,8 @@
     "express": "^4.17.1",
     "express-validator": "^6.7.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.3"
+    "mongoose": "^5.11.3",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "body-parser": "^1.19.0",
