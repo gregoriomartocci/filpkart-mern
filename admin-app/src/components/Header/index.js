@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink, Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -28,6 +29,18 @@ export default function Header() {
               {/* <Nav.Link eventKey={2} href="#memes">
               Dank memes
             </Nav.Link> */}
+              <li>
+                {" "}
+                <NavLink to="signin" className="nav-item">
+                  Sign in
+                </NavLink>
+              </li>
+              <li>
+                {" "}
+                <NavLink to="signup" className="nav-item">
+                  Sign up
+                </NavLink>
+              </li>
             </Nav>
           </Navbar.Collapse>
         </Container>
