@@ -1,7 +1,9 @@
 import React from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import Layout from "../Layout";
-import Input from "../UI/input";
+import Layout from "../../components/Layout";
+import Input from "../../components/UI/input";
+
+
 
 export default function Signup() {
   return (

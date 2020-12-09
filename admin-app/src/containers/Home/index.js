@@ -1,6 +1,7 @@
 import React from "react";
 import { Jumbotron } from "react-bootstrap";
-import Layout from "../Layout";
+import Layout from "../../components/Layout";
+
 
 function Home(props) {
   return (
