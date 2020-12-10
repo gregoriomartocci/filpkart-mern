@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
-import { isUserLoggedIn, login } from "../../actions";
 import Layout from "../../components/Layout";
 import Input from "../../components/UI/input";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
+import { login } from "../../actions";
 
 // useState is DYNAMIC ( VA A IR CAMBIANDO ) a HOOK wich helps to create a state in functional COMPONENTS
 // ESTO DEVUELVE UN ARREGLO,  UNO ES UN VALOR Y OTRO ES UNA FUNCION QUE LE PODEMOS SETEAR VALORES
@@ -17,11 +17,6 @@ const Signin = (props) => {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if(auth.authenticate){
-      dispatch(isUserLoggedIn())
-    }
-  }, []);
 
   const userLogin = (e) => {
     e.preventDefault(); // no recargamos la pagina

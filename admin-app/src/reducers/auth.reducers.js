@@ -13,13 +13,14 @@ const initState = {
 };
 
 export default (state = initState, action) => {
+
   console.log(action);
 
   switch (action.type) {
     case authConstants.LOGIN_REQUEST:
       state = {
         ...state,
-        authenticating:true,
+        authenticating: true,
       };
       break;
     case authConstants.LOGIN_SUCCESS:
@@ -30,6 +31,12 @@ export default (state = initState, action) => {
         authenticate: true,
         authenticating: false,
       };
+      break;
+    case authConstants.LOGOUT_REQUEST:
+      state = {
+        ...initState
+      };
+      break;
   }
   return state;
 };
