@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, {useState} from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { login } from "../../actions";
 import Layout from "../../components/Layout";
@@ -7,16 +6,23 @@ import Input from "../../components/UI/input";
 import { useDispatch } from "react-redux";
 
 
+// useState is DYNAMIC ( VA A IR CAMBIANDO ) a HOOK wich helps to create a state in functional COMPONENTS
+// ESTO DEVUELVE UN ARREGLO,  UNO ES UN VALOR Y OTRO ES UNA FUNCION QUE LE PODEMOS SETEAR VALORES
+
 const Signin = (props)  => {
 
   const dispatch = useDispatch();
+  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  
 
   const userLogin = (e) => {
     e.preventDefault(); // no recargamos la pagina
   
     const user = {
-      email: "riz@gmail.com",
-      password: "123456",
+      email,password
     };
   
     dispatch(login(user));
@@ -33,17 +39,17 @@ const Signin = (props)  => {
                 <Input
                   label="Email"
                   placeholder="Email"
-                  value=""
+                  value={email}
                   type="email"
-                  onChange={() => {}}
+                  onChange={(e) => setEmail(e.target.value)}
                 ></Input>
 
                 <Input
                   label="Password"
                   placeholder="Password"
-                  value=""
+                  value={password}
                   type="password"
-                  onChange={() => {}}
+                  onChange={(e) => setPassword(e.target.value)}
                 ></Input>
 
                 <Button variant="primary" type="submit">
