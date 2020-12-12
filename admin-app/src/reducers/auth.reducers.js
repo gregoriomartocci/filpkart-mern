@@ -1,3 +1,5 @@
+/* eslint-disable import/no-anonymous-default-export */
+/* eslint-disable default-case */
 import { authConstants } from "../actions/constants";
 
 const initState = {
@@ -10,10 +12,12 @@ const initState = {
   },
   authenticate: false,
   authenticating: false,
+  loading: false,
+  error: null,
+  message: "",
 };
 
 export default (state = initState, action) => {
-
   console.log(action);
 
   switch (action.type) {
@@ -34,7 +38,20 @@ export default (state = initState, action) => {
       break;
     case authConstants.LOGOUT_REQUEST:
       state = {
-        ...initState
+        ...state,
+        loading: true,
+      };
+      break;
+    case authConstants.LOGOUT_SUCCESS:
+      state = {
+        ...initState,
+      };
+      break;
+    case authConstants.LOGOUT_FAILURE:
+      state = {
+        ...state,
+        error: action.payload.error,
+        loading: false
       };
       break;
   }

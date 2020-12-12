@@ -2,6 +2,9 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./style.css";
 import Layout from "../../components/Layout";
+import { NavLink } from "react-router-dom";
+
+
 
 function Home(props) {
   return (
@@ -10,13 +13,35 @@ function Home(props) {
         <Container fluid>
           <Row>
             <Col md={2} className="sidebar">
-              Side Bar
+              <ul>
+                <li><NavLink to={"/"}>Home</NavLink></li>
+                <li><NavLink to={"/products"}>Products</NavLink></li>
+                <li><NavLink to={"/orders"}>Orders</NavLink></li>
+              </ul>
             </Col>
             <Col md={10} style={{ marginLeft: "auto" }}>Container</Col>
           </Row>
         </Container>
 
-        {/* <Jumbotron
+      
+      </Layout>
+    </div>
+  );
+}
+
+export default Home;
+
+
+
+
+
+
+
+
+
+
+  // eslint-disable-next-line no-lone-blocks
+  {/* <Jumbotron
           style={{ margin: "5rem", background: "white" }}
           className="text-center"
         >
@@ -34,9 +59,3 @@ function Home(props) {
             and the like).
           </p>
         </Jumbotron> */}
-      </Layout>
-    </div>
-  );
-}
-
-export default Home;

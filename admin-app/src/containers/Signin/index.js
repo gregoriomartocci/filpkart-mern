@@ -17,7 +17,6 @@ const Signin = (props) => {
 
   const dispatch = useDispatch();
 
-
   const userLogin = (e) => {
     e.preventDefault(); // no recargamos la pagina
 
@@ -30,7 +29,7 @@ const Signin = (props) => {
   };
 
   if (auth.authenticate) {
-    return <Redirect />;
+    return <Redirect to="/" />;
   }
 
   return (
