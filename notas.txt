@@ -1,0 +1,6 @@
+el modelo de la noticia tiene
+
+- Titulo
+
+- Fotos 
+

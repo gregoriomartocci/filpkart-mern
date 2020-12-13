@@ -4,44 +4,19 @@ import "./style.css";
 import Layout from "../../components/Layout";
 import { NavLink } from "react-router-dom";
 
-
-
 function Home(props) {
   return (
     <div>
-      <Layout>
-        <Container fluid>
-          <Row>
-            <Col md={2} className="sidebar">
-              <ul>
-                <li><NavLink to={"/"}>Home</NavLink></li>
-                <li><NavLink to={"/products"}>Products</NavLink></li>
-                <li><NavLink to={"/orders"}>Orders</NavLink></li>
-              </ul>
-            </Col>
-            <Col md={10} style={{ marginLeft: "auto" }}>Container</Col>
-          </Row>
-        </Container>
-
-      
-      </Layout>
+      <Layout sidebar></Layout>
     </div>
   );
 }
 
 export default Home;
 
-
-
-
-
-
-
-
-
-
-  // eslint-disable-next-line no-lone-blocks
-  {/* <Jumbotron
+// eslint-disable-next-line no-lone-blocks
+{
+  /* <Jumbotron
           style={{ margin: "5rem", background: "white" }}
           className="text-center"
         >
@@ -58,4 +33,5 @@ export default Home;
             years, sometimes by accident, sometimes on purpose (injected humour
             and the like).
           </p>
-        </Jumbotron> */}
+        </Jumbotron> */
+}
